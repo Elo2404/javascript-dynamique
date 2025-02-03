@@ -104,7 +104,7 @@ const prixDispo = pieces.map(piece => piece.prix);
 
 // Suppression des pièces non disponibles
 for (let j = pieces.length - 1; j >= 0; j--) {
-    if (!pieces[j].disponibilite) {
+    if (pieces[j].disponibilite===false) {
         dispo.splice(j, 1);  // Supprime le nom de la pièce
         prixDispo.splice(j, 1); // Utiliser splice() au lieu de slice()
     }
