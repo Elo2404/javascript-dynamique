@@ -147,4 +147,5 @@ async function chargerPieces() {
         console.error("Erreur de récupération des pièces:", error);
     }
 }
+chargerPieces();
 
