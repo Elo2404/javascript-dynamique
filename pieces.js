@@ -124,7 +124,15 @@ async function loadData() {
         nomElement.innerText = `${nomDisponibles[k]} - ${prixDisponibles[k]} €`;
         disponiblesElement.appendChild(nomElement);
     }
+    // Ajout au DOM dans la section ".dispo"
+    document.querySelector('.dispo').appendChild(disponiblesElement);
+
+    const inputPrixMax=document.querySelector('#prix-max');
+    inputPrixMax.addEventListener('input', ()=>{
+        const piecesFiltrees = pieces.filter(function(piece){
+            return piece.prix <=inputPrixMax.value;
+        });
+    })
 }
 
-// Ajout au DOM dans la section ".dispo"
-document.querySelector('.dispo').appendChild(disponiblesElement);
+
