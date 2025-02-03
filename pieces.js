@@ -39,6 +39,7 @@ function genererPieces(pieces){
 }
 
 async function chargerPieces() {
+    console.log("chargement des pièces ...");
     try {
         const reponse = await fetch('pieces-autos.json');
         if (!reponse.ok){
