@@ -100,16 +100,19 @@ document.querySelector('.abordables')
 
 //Création map dispo
 const dispo = pieces.map(piece =>piece.nom);
+const prixDispo = pieces.map(piece =>piece.prix);
+
 for(let j = pieces.length-1;j>=0;j--){
 	if(!pieces[j].disponibilite){
 		dispo.splice(j,1);
+		prixDispo.slice(j,1);
 	}
 }  
  
 const dispoElements = document.createElement('ul');
 for(let k=0;k<dispo.length;k++){
 	const dispoElement = document.createElement('li');
-	dispoElement.innerText=dispo[k];
+	dispoElement.innerText=`${dispo[k]} - ${prixDispo[k]};
 	dispoElements.appendChild(dispoElement)
 }
 document.querySelector('.dispo')
