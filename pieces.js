@@ -48,7 +48,7 @@ function genererPieces(pieces){
      }
 }
 
-chargerPieces(pieces);
+chargerPieces();
 
  //gestion des bouttons 
 const boutonTrier = document.querySelector(".btn-trier");
