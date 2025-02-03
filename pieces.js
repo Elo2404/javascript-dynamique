@@ -1,15 +1,6 @@
 // Récupération des pièces depuis le fichier JSON
 const reponse = await fetch('pieces-autos.json');
 const pieces = await reponse.json();
-console.log(pieces);
-
-/*async function loadData() {
-    const reponse = await fetch('pieces-autos.json');
-    const pieces = await reponse.json();
-    console.log(pieces);
-}
-
-loadData();*/
 
 function genererPieces(pieces){
     for (let i = 0; i < pieces.length; i++) {
@@ -25,7 +16,7 @@ function genererPieces(pieces){
         const nomElement = document.createElement("h2");
         nomElement.innerText = article.nom;
         const prixElement = document.createElement("p");
-        prixElement.innerText = Prix: ${article.prix} € (${article.prix < 35 ? "€" : "€€€"});
+        prixElement.innerText = `Prix: ${article.prix} € (${article.prix < 35 ? "€" : "€€€"})`;
         const categorieElement = document.createElement("p");
         categorieElement.innerText = article.categorie ?? "(aucune catégorie)";
         const descriptionElement = document.createElement("p");
@@ -132,7 +123,7 @@ const disponiblesElement = document.createElement('ul');
 
 for(let i=0 ; i < nomsDisponibles.length ; i++){
     const nomElement = document.createElement('li');
-    nomElement.innerText = ${nomsDisponibles[i]} - ${prixDisponibles[i]} €
+    nomElement.innerText = `${nomsDisponibles[i]} - ${prixDisponibles[i]} €`
     disponiblesElement.appendChild(nomElement);
 }
 
