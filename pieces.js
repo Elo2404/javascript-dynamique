@@ -138,7 +138,7 @@ for(let i=0 ; i < nomsDisponibles.length ; i++){
 }
 
 const pElementDisponible = document.createElement('p')
-pElementDisponible.innerText = "Pièces disponibles:";
+pElementDisponible.innerText = "Pièces disponibles :";
 document.querySelector('.disponibles').appendChild(pElementDisponible).appendChild(disponiblesElement)
 
 const inputPrixMax = document.querySelector('#prix-max')
