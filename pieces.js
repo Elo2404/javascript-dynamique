@@ -2,11 +2,12 @@
 const reponse = await fetch('pieces-autos.json');
 const pieces = await reponse.json();
 console.log(pieces);*/
+
 // Fonction asynchrone pour charger les données
 async function loadData() {
     const reponse = await fetch('pieces-autos.json');
     const pieces = await reponse.json();
-    console.log(pieces);
+    //console.log(pieces);
 
     for (let i = 0; i < pieces.length; i++) {
     
