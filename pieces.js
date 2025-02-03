@@ -104,7 +104,7 @@ console.log(noms)
 //Création de l'en-tête
 
 const pElement = document.createElement('p')
-pElement.innerText = "Pièces abordables :";
+pElement.innerText = "Pièces abordables";
 //Création de la liste
 const abordablesElements = document.createElement('ul');
 //Ajout de chaque nom à la liste
@@ -138,7 +138,7 @@ for(let i=0 ; i < nomsDisponibles.length ; i++){
 }
 
 const pElementDisponible = document.createElement('p')
-pElementDisponible.innerText = "Pièces disponibles :";
+pElementDisponible.innerText = "Pièces disponibles";
 document.querySelector('.disponibles').appendChild(pElementDisponible).appendChild(disponiblesElement)
 
 const inputPrixMax = document.querySelector('#prix-max')
