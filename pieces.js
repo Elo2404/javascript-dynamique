@@ -98,22 +98,25 @@ for(let i=0; i < noms.length ; i++){
 document.querySelector('.abordables')
    .appendChild(abordablesElements)
 
-//Création map dispo
-const dispo = pieces.map(piece =>piece.nom);
-const prixDispo = pieces.map(piece =>piece.prix);
+// Création des tableaux avec noms et prix des pièces disponibles
+const dispo = pieces.map(piece => piece.nom);
+const prixDispo = pieces.map(piece => piece.prix);
 
-for(let j = pieces.length-1;j>=0;j--){
-	if(!pieces[j].disponibilite){
-		dispo.splice(j,1);
-		prixDispo.splice(j,1);
-	}
-}  
- 
-const dispoElements = document.createElement('ul');
-for(let k=0;k<dispo.length;k++){
-	const dispoElement = document.createElement('li');
-	dispoElement.innerText=`${dispo[k]} - ${prixDispo[k]}`;
-	dispoElements.appendChild(dispoElement)
+// Suppression des pièces non disponibles
+for (let j = pieces.length - 1; j >= 0; j--) {
+    if (!pieces[j].disponibilite) {
+        dispo.splice(j, 1);  // Supprime le nom de la pièce
+        prixDispo.splice(j, 1); // Utiliser splice() au lieu de slice()
+    }
 }
-document.querySelector('.dispo')
-	.appendChild(dispoElements)
+
+// Création de la liste UL pour afficher les pièces disponibles
+const dispoElements = document.createElement('ul');
+for (let k = 0; k < dispo.length; k++) {
+    const dispoElement = document.createElement('li');
+    dispoElement.innerText = `${dispo[k]} - ${prixDispo[k]} €`;
+    dispoElements.appendChild(dispoElement);
+}
+
+// Ajout au DOM dans la section ".dispo"
+document.querySelector('.dispo').appendChild(dispoElements);
