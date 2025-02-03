@@ -105,7 +105,7 @@ const prixDispo = pieces.map(piece =>piece.prix);
 for(let j = pieces.length-1;j>=0;j--){
 	if(!pieces[j].disponibilite){
 		dispo.splice(j,1);
-		prixDispo.slice(j,1);
+		prixDispo.splice(j,1);
 	}
 }  
  
