@@ -44,7 +44,10 @@ async function chargerPieces() {
         if (!reponse.ok){
             throw new Error('Erreur de chargement : ${reponse.status}');
         }
-        const pieces = await reponse.json();
+        const text = await reponse.text();
+        console.log(text);
+        const pieces = JSON.parse(text);
+        //const pieces = await reponse.json();
         console.log("pièces récupérées : ", pieces);
         genererPieces(pieces);
 
