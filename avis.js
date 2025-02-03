@@ -3,7 +3,7 @@ export function ajoutListenersAvis(){
   for(let i = 0; i <piecesElements.length;i++){
     piecesElements[i].addEventListener("click", (event)=>{
       const id = event.target.dataset.id;
-      fetch("http://localhost:8081/${id}/avis");
+      fetch("https://apiformation.glitch.me/${id}/avis");
     });
   }
 }
