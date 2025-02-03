@@ -45,6 +45,7 @@ async function chargerPieces() {
             throw new Error('Erreur de chargement : ${reponse.status}');
         }
         const pieces = await reponse.json();
+        console.log("pièces récupérées : ", pieces);
         genererPieces(pieces);
 
      //gestion des bouttons 
