@@ -16,7 +16,7 @@ function genererPieces(pieces){
         const nomElement = document.createElement("h2");
         nomElement.innerText = article.nom;
         const prixElement = document.createElement("p");
-        prixElement.innerText = `Prix: ${article.prix} € (${article.prix < 35 ? "€" : "€€€"})`;
+        prixElement.innerText = Prix: ${article.prix} € (${article.prix < 35 ? "€" : "€€€"});
         const categorieElement = document.createElement("p");
         categorieElement.innerText = article.categorie ?? "(aucune catégorie)";
         const descriptionElement = document.createElement("p");
@@ -127,7 +127,7 @@ async function chargerPieces() {
     
     for(let i=0 ; i < nomsDisponibles.length ; i++){
         const nomElement = document.createElement('li');
-        nomElement.innerText = `${nomsDisponibles[i]} - ${prixDisponibles[i]} €`
+        nomElement.innerText = ${nomsDisponibles[i]} - ${prixDisponibles[i]} €
         disponiblesElement.appendChild(nomElement);
     }
     
