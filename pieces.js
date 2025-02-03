@@ -132,6 +132,9 @@ async function loadData() {
         const piecesFiltrees = pieces.filter(function(piece){
             return piece.prix <=inputPrixMax.value;
         });
+        document.querySelector(".fiches").innerHTML="";
+        genererPieces(piecesFiltrees);
+        
     })
 }
 
