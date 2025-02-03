@@ -41,6 +41,9 @@ function genererPieces(pieces){
 async function chargerPieces() {
     try {
         const reponse = await fetch('pieces-autos.json');
+        if (!reponse.ok){
+            throw new Error('Erreur de chargement : ${reponse.status}');
+        }
         const pieces = await reponse.json();
         genererPieces(pieces);
 
