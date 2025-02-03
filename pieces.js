@@ -1,6 +1,16 @@
-// Récupération des pièces depuis le fichier JSON
+/*// Récupération des pièces depuis le fichier JSON
 const reponse = await fetch('pieces-autos.json');
-const pieces = await reponse.json();
+const pieces = await reponse.json();*/
+
+async function chargerPieces() {
+    try {
+        const reponse = await fetch('pieces-autos.json');
+        const pieces = await reponse.json();
+        genererPieces(pieces);
+    } catch (error) {
+        console.error("Erreur de récupération des pièces:", error);
+    }
+}
 
 function genererPieces(pieces){
     for (let i = 0; i < pieces.length; i++) {
