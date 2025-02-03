@@ -3,9 +3,13 @@ const reponse = await fetch('pieces-autos.json');
 const pieces = await reponse.json();
 console.log(pieces);*/
 
-// Récupération des pièces depuis le fichier JSON
-const reponse = await fetch('pieces-autos.json');
-const pieces = await reponse.json();
+async function loadData() {
+    const reponse = await fetch('pieces-autos.json');
+    const pieces = await reponse.json();
+    console.log(pieces);
+}
+
+loadData();
 
 function genererPieces(pieces){
     for (let i = 0; i < pieces.length; i++) {
