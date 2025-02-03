@@ -104,7 +104,7 @@ console.log(noms)
 //Création de l'en-tête
 
 const pElement = document.createElement('p')
-pElement.innerText = "Pièces abordables";
+pElement.innerText = "Pièces abordables :";
 //Création de la liste
 const abordablesElements = document.createElement('ul');
 //Ajout de chaque nom à la liste
