@@ -112,7 +112,7 @@ for(let j = pieces.length-1;j>=0;j--){
 const dispoElements = document.createElement('ul');
 for(let k=0;k<dispo.length;k++){
 	const dispoElement = document.createElement('li');
-	dispoElement.innerText=`${dispo[k]} - ${prixDispo[k]};
+	dispoElement.innerText=`${dispo[k]} - ${prixDispo[k]}`;
 	dispoElements.appendChild(dispoElement)
 }
 document.querySelector('.dispo')
