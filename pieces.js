@@ -130,7 +130,7 @@ async function chargerPieces() {
     
     for(let i=0 ; i < nomsDisponibles.length ; i++){
         const nomElement = document.createElement('li');
-        nomElement.innerText = ${nomsDisponibles[i]} - ${prixDisponibles[i]} €
+        nomElement.innerText = `${nomsDisponibles[i]} - ${prixDisponibles[i]} €`;
         disponiblesElement.appendChild(nomElement);
     }
     
